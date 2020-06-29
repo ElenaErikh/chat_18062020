@@ -1,0 +1,70 @@
+[ nick2 ] private [ zorro ]: asdfasdf
+[ nick1 ] private [ zorro ]: asdfasdf
+nick3 : hello
+nick1 : hello
+zorro :  fsadfasdf 
+zorro : a sdfasdf s
+zorro : asd fasd fsad
+zzzzzzzz : sdf sdaf 
+zzzzzzzz : as df sdaf
+[ zzzzzzzz ] private [ zorro ]: as dfsdf asd
+zzzzzzzz : as df asd
+zorro : 123 123 12
+zorro : 1 231 2312 3
+zorro : 1 2312 31
+zzzzzzzz : sdf safd 
+zorro : dsfa sdf asd
+zorro : 12312 3123 123 123
+zorro : fd
+zorro : fvdfb
+
+zorro: vxvx
+zorro: jb,
+[ nick2 ] private [ zorro ]: asdfasdf
+[ nick1 ] private [ zorro ]: asdfasdf
+nick3 : hello
+nick1 : hello
+zorro :  fsadfasdf 
+zorro : a sdfasdf s
+zorro : asd fasd fsad
+zzzzzzzz : sdf sdaf 
+zzzzzzzz : as df sdaf
+[ zzzzzzzz ] private [ zorro ]: as dfsdf asd
+zzzzzzzz : as df asd
+zorro : 123 123 12
+zorro : 1 231 2312 3
+zorro : 1 2312 31
+zzzzzzzz : sdf safd 
+zorro : dsfa sdf asd
+zorro : 12312 3123 123 123
+zorro : fd
+zorro : fvdfb
+zorro : vxvx
+zorro : jb,
+
+zorro: привет
+[ zzzzzzzz ] private [ zorro ] : hi
+[ nick2 ] private [ zorro ]: asdfasdf
+[ nick1 ] private [ zorro ]: asdfasdf
+nick3 : hello
+nick1 : hello
+zorro :  fsadfasdf 
+zorro : a sdfasdf s
+zorro : asd fasd fsad
+zzzzzzzz : sdf sdaf 
+zzzzzzzz : as df sdaf
+[ zzzzzzzz ] private [ zorro ]: as dfsdf asd
+zzzzzzzz : as df asd
+zorro : 123 123 12
+zorro : 1 231 2312 3
+zorro : 1 2312 31
+zzzzzzzz : sdf safd 
+zorro : dsfa sdf asd
+zorro : 12312 3123 123 123
+zorro : fd
+zorro : fvdfb
+zorro : vxvx
+zorro : jb,
+zorro : привет
+[ zzzzzzzz ] private [ zorro ]: hi
+
