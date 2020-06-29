@@ -19,9 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,6 +51,7 @@ public class Controller implements Initializable {
 
     private boolean authenticated;
     private String nick;
+    private String login;
 
     public void setAuthenticated(boolean authenticated) {
         this.authenticated = authenticated;
@@ -116,7 +115,6 @@ public class Controller implements Initializable {
                             setAuthenticated(true);
                             break;
                         }
-
                         textArea.appendText(str + "\n");
                     }
 
@@ -148,6 +146,9 @@ public class Controller implements Initializable {
 
                         } else {
                             textArea.appendText(str + "\n");
+
+                            /////// добавила сюда ///////////
+                            saveChatHistory(str+ "\n");
                         }
                     }
                 }catch (RuntimeException e){
@@ -196,7 +197,6 @@ public class Controller implements Initializable {
         Platform.runLater(() -> {
             ((Stage) textField.getScene().getWindow()).setTitle("Super chat " + nick);
         });
-
     }
 
     public void clickClientList(MouseEvent mouseEvent) {
@@ -224,7 +224,6 @@ public class Controller implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return stage;
     }
 
@@ -232,8 +231,8 @@ public class Controller implements Initializable {
         regStage.show();
     }
 
-    public void tryRegistration(String login, String password ,String nickname){
-        String msg = String.format("/reg %s %s %s", login, password ,nickname);
+    public void tryRegistration(String login, String password, String nickname){
+        String msg = String.format("/reg %s %s %s", login, password, nickname);
 
         if (socket == null || socket.isClosed()) {
             connect();
@@ -244,7 +243,25 @@ public class Controller implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    ///////// добавила метод /////////
+    public void saveChatHistory(String str){
+        login = loginField.getText();
+        File file = new File("client/chatHistory/history_[" + login + "].txt");
+        if (!file.exists()){
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try(FileOutputStream fos = new FileOutputStream("client/chatHistory/history_[" + login + "].txt", true);){
+            fos.write(str.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
